@@ -67,3 +67,29 @@ export default tseslint.config([
   },
 ])
 ```
+
+## Stripe Checkout
+
+The project includes a minimal Stripe Checkout example for testing subscriptions. To try it out:
+
+1. Set the required environment variables in the repository root:
+
+   ```bash
+   export STRIPE_SECRET_KEY=sk_test_YOUR_KEY
+   export PRICE_ID=price_YOUR_PRICE
+   export VITE_STRIPE_PUBLISHABLE_KEY=pk_test_YOUR_PUBLISHABLE_KEY
+   ```
+
+2. Start the server that creates checkout sessions:
+
+   ```bash
+   node server.js
+   ```
+
+3. In another terminal run the frontend:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Navigate to `http://localhost:5173` and click **Join Now** to open Stripe Checkout. Test card numbers or Apple Pay can be used during checkout.
