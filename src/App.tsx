@@ -102,23 +102,23 @@ const App: React.FC = () => {
       </div>
 
       <header className="hero">
-        <h1>StockFlyer Indian Equity Analysis</h1>
-        <p>Deep-dive insights into Indian stock markets right at your fingertips.</p>
+        <h1>StockFlyer US Equity Analysis</h1>
+        <p>Deep-dive insights into US stock markets right at your fingertips.</p>
         <button className="cta">Join Now</button>
       </header>
       
       <section className="features">
         <div className="feature-card">
           <h3>Real-Time Screener</h3>
-          <p>Filter NSE & BSE stocks using live market data and technical indicators.</p>
+          <p>Filter NYSE & NASDAQ stocks using live market data and technical indicators.</p>
         </div>
         <div className="feature-card">
           <h3>AI Market Sentiment</h3>
-          <p>Natural-language summaries of Indian market trends and sector analysis.</p>
+          <p>Natural-language summaries of US market trends and sector analysis.</p>
         </div>
         <div className="feature-card">
           <h3>Model Portfolios</h3>
-          <p>Curated Indian stock lists built by expert analysts for different timeframes.</p>
+          <p>Curated US stock lists built by expert analysts for different timeframes.</p>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ const App: React.FC = () => {
               <span className="icon">🧠</span>
               <h2>SF-Essential</h2>
             </div>
-            <h1>Comprehensive Indian Equities Insights</h1>
+            <h1>Comprehensive US Equities Insights</h1>
             <div className="rating">
               <div className="stars">★★★★★</div>
               <span>5.00 (18) Trading</span>
@@ -211,7 +211,7 @@ const App: React.FC = () => {
         </div>
 
         <div className="product-description-full">
-          <p>Dive into Indian Equities with discussions on short-term trades, swing trades, and long-term investments. Access sentiment data and analyze micro and macro market factors specific to Indian markets.</p>
+          <p>Dive into US Equities with discussions on short-term trades, swing trades, and long-term investments. Access sentiment data and analyze micro and macro market factors specific to US markets.</p>
         </div>
 
         <div className="features-list">
@@ -219,11 +219,11 @@ const App: React.FC = () => {
           <div className="features-grid">
             <div className="feature-item">
               <span className="checkmark">✓</span>
-              <span>Indian Equities (NSE & BSE) for Short, Medium and Long term Trading/Investing.</span>
+              <span>US Equities (NYSE & NASDAQ) for Short, Medium and Long term Trading/Investing.</span>
             </div>
             <div className="feature-item">
               <span className="checkmark">✓</span>
-              <span>In-depth analysis of Indian micro and macro market factors.</span>
+              <span>In-depth analysis of US micro and macro market factors.</span>
             </div>
             <div className="feature-item">
               <span className="checkmark">✓</span>
@@ -231,7 +231,7 @@ const App: React.FC = () => {
             </div>
             <div className="feature-item">
               <span className="checkmark">✓</span>
-              <span>Free monthly insider zoom webinars on Indian markets</span>
+              <span>Free monthly insider zoom webinars on US markets</span>
             </div>
           </div>
         </div>
@@ -285,7 +285,7 @@ const App: React.FC = () => {
             </div>
           </div>
           <p className="creator-bio">
-            I've dedicated my career to demystifying Indian equity markets. With a passion for the Indian market, I aim to empower investors with the knowledge to succeed in NSE and BSE trading.
+            I've dedicated my career to demystifying global equity markets. With a passion for the US market, I aim to empower investors with the knowledge to diversify and succeed.
           </p>
         </div>
       </section>
@@ -297,12 +297,12 @@ const App: React.FC = () => {
             <h3>Become an affiliate</h3>
           </div>
           <div className="affiliates-content">
-            <h4>STOCKFLYER- Indian Equity Analysis</h4>
+            <h4>STOCKFLYER- US Equity Analysis</h4>
             <div className="reward-info">
               <span className="reward-percentage">5% reward</span>
             </div>
             <p className="affiliates-description">
-              Earn money by bringing customers to STOCKFLYER- Indian Equity Analysis. Every time a customer purchases using your link, you'll earn a commission.
+              Earn money by bringing customers to STOCKFLYER- US Equity Analysis. Every time a customer purchases using your link, you'll earn a commission.
             </p>
             <button className="affiliate-btn">Become an Affiliate</button>
           </div>
