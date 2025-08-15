@@ -39,8 +39,8 @@ app.post('/api/create-checkout-session', async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: `${origin}/success`,
-      cancel_url: `${origin}/cancel`,
+      success_url: origin,
+      cancel_url: origin,
     });
     res.json({ url: session.url });
   } catch (err) {
@@ -69,8 +69,8 @@ app.post('/api/create-subscription-session', async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: `${origin}/success`,
-      cancel_url: `${origin}/cancel`,
+      success_url: origin,
+      cancel_url: origin,
     });
     res.json({ url: session.url });
   } catch (err) {
