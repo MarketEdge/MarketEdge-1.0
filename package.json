@@ -1,0 +1,13 @@
+{
+  "name": "marketedge-1.0",
+  "version": "1.0.0",
+  "description": "This repository contains a simple Node.js backend and a React + TypeScript frontend built with Vite. The backend exposes a minimal API for creating Stripe Checkout sessions, while the frontend demonstrates how to subscribe through Stripe.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
