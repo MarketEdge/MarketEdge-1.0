@@ -93,6 +93,47 @@ const App: React.FC = () => {
     document.body.classList.toggle('dark-mode');
   };
 
+  const API_BASE = import.meta.env.VITE_API_BASE || '';
+
+  const handlePay = async () => {
+    const product = products.find(p => p.id === selectedProduct);
+    const amount = getSelectedProductPrice() * 100; // convert to cents
+    try {
+      const res = await fetch(`${API_BASE}/api/create-checkout-session`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount, productName: product?.name })
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+    } catch (err) {
+      console.error('Payment error', err);
+    }
+  };
+
+  const handleSubscribe = async () => {
+    const product = products.find(p => p.id === selectedProduct);
+    const amount = getSelectedProductPrice() * 100; // cents
+    let interval: 'month' | 'year' = 'month';
+    let interval_count = 1;
+    if (selectedPlan === '3months') {
+      interval_count = 3;
+    } else if (selectedPlan === '1year') {
+      interval = 'year';
+    }
+    try {
+      const res = await fetch(`${API_BASE}/api/create-subscription-session`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount, productName: product?.name, interval, interval_count })
+      });
+      const data = await res.json();
+      if (data.url) window.location.href = data.url;
+    } catch (err) {
+      console.error('Subscription error', err);
+    }
+  };
+
   return (
     <div className={darkMode ? 'dark-mode' : ''}>
       <div className="theme-toggle">
@@ -194,11 +235,11 @@ const App: React.FC = () => {
             </div>
 
             <div className="payment-buttons">
-              <button className="payment-btn google-pay">
+              <button className="payment-btn google-pay" onClick={handlePay}>
                 <span className="google-pay-icon">G</span>
                 Pay
               </button>
-              <button className="payment-btn subscribe">
+              <button className="payment-btn subscribe" onClick={handleSubscribe}>
                 Subscribe
               </button>
             </div>
