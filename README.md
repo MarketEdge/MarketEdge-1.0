@@ -11,43 +11,41 @@ This repository contains a simple Node.js backend and a React + TypeScript front
   - `PRICE_ID`
   - `VITE_STRIPE_PUBLISHABLE_KEY`
 
-## Installation
 
-1. Clone the repository and move into the project directory:
+## Installation & Starting the Service
+
+1. **Clone the repository and move into the project directory:**
    ```bash
    git clone <repository-url>
    cd MarketEdge-1.0
    ```
-2. Install frontend dependencies:
+
+2. **Install dependencies at both the root and frontend:**
    ```bash
+   npm install
    cd frontend
    npm install
    cd ..
    ```
 
-## Running the application
+3. **Set the required environment variables:**
+   - `STRIPE_SECRET_KEY` (your Stripe secret key)
+   - `PRICE_ID` (your Stripe Price ID)
+   - `VITE_STRIPE_PUBLISHABLE_KEY` (your Stripe publishable key)
 
-### 1. Start the server
+   You can set these in your shell or in a `.env` file at the root.
 
-Set the required environment variables and start the Node.js server. The server listens on port `4242` by default.
+4. **Start both backend and frontend together:**
+   ```bash
+   npm run dev
+   ```
+   This uses `concurrently` to run the backend (`node server.js`) and the Vite frontend (`npm --prefix frontend run dev`) in parallel.
 
-```bash
-export STRIPE_SECRET_KEY=sk_test_YOUR_KEY
-export PRICE_ID=price_YOUR_PRICE
-export VITE_STRIPE_PUBLISHABLE_KEY=pk_test_YOUR_PUBLISHABLE_KEY
-node server.js
-```
+5. **Open the app:**
+   Visit [http://localhost:5173](http://localhost:5173) in your browser. Click **Join Now** to test frontend–backend connectivity (it should POST to `http://localhost:4242/create-checkout-session`).
 
-### 2. Start the frontend
+---
 
-In a new terminal window, run the frontend development server:
-
-```bash
-cd frontend
-npm run dev
-```
-
-Visit <http://localhost:5173> in your browser and click **Join Now** to open Stripe Checkout.
 
 ## Building for production
 
